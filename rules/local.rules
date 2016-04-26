@@ -5,5 +5,5 @@
 # This file intentionally does not come with signatures.  Put your local
 # additions here.
 
-#alert icmp any any -> $HOME_NET any (msg:"ICMP test detected"; GID:1; sid:10000001; rev:001; classtype:icmpevent;)
-alert icmp any any -> any any (msg:"ICMP packet found"; sid:10000001;)
+alert icmp any any -> $HOME_NET any (msg:"ICMP packet found"; sid:10000001;)
+alert tcp any any -> $HOME_NET any (msg:"TELNET Attempted SU from wrong graphics/ccc.gifgroup"; content:"to su root"; nocase; classtype:attempted-admin; sid:715;)
